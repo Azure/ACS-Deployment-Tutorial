@@ -1,18 +1,18 @@
+### Authors: Mathew Salvaris and Ilia karmanov
+
 # Deploy ML on ACS 
-Deploying machine learning models can often be tricky due to their numerous dependencies, 
-deep learning models even more so due to the plethora of libraries used. One of the ways to overcome this is to use Docker containers.
-Unfortunately it is rarely straight forward and end-to-end guides are rare. 
-This repository contains an end-to-end tutorial on how to deploy a pre-trained deep learning model using Azure Container Services(ACS).
+Deploying machine learning models can often be tricky due to their numerous dependencies, deep learning models often even more so. One of the ways to overcome this is to use Docker containers. Unfortunately, it is rarely straight forward. In this tutorial, we will demonstrate how to deploy a pre-trained deep learning model using Azure Container Services which allows us to orchestrate a number of containers using DC/OS. By using Azure Container Services, we can ensure that is performant, scalable and flexible enough to accommodate any Deep Learning framework. 
+The Docker image we will be deploying can be found here. It contains a simple Flask web application with Nginx web server. The Deep learning framework we will use is the Microsoft Cognitive Toolkit (CNTK) and we will be using a pre-trained model specifically the ResNet 152 model.
 
-By using Azure Container Services we can ensure that our ML application is performant, scalable and flexible enough to accommodate any deep learning framework. 
-The Docker image we will be deploying can be found [here](https://hub.docker.com/r/masalvar/cntkresnet/). It contains a simple Flask web application with an Nginx web server. 
-The deep learning framework we will use is Microsoft's Cognitive Toolkit (CNTK). We will be using a pretrained model specifically the ResNet 152 model.
+Azure Container Services enables you to configure, construct and manage a cluster of virtual machines pre-configured to run containerized applications. Once the cluster is set up you can use a number of open-source scheduling and orchestration tools, such as Kubernetes and DC/OS. This is ideal for machine learning application since we can use Docker containers which enable us to have ultimate flexibility in the libraries we use and allows us to easily scale up based on demand. While always ensuring that our application remains performant. You can create an ACS through the Azure portal but in this tutorial we will be constructing it using the Azure CLI.
 
-The tutorial is split into 4 notebooks and these are:
-[Build App Image](BuildImage.ipynb): This notebook will construct a basic web application using Flask and Nginx. It will then build a Docker image and push the image to a public hub.
-[Test application locally](TestLocally.ipynb): This notebook will test In this notebook we run the Docker image we created in the last notebook and test it out locally.
-[Deploy application on ACS](DeployACS.ipynb): Here we will use the Azure CLI to create the ACS. Once created we will specify our application and submit it to Marathon.
-[Test application](TestApp.ipynb): In this notebook we will simply test the remote application to check that everything works.
+The application will be a simple image classification service, where we will submit an image and get back what class the image belongs to. We have split the process into four sections.
+[Create Docker image of our application](BuildImage.ipynb)
+[Test the application locally](TestLocally.ipynb)
+[Create an ACS cluster and deploy our web app](DeployACS.ipynb)
+[Test our web app](TestApp.ipynb)
+
+Each section is accompanied by a Jupyter notebook which contain step by step instructions on how to create, deploy and test a web application.
 
 If you already have a Docker image that you would like to deploy you can skip the first two notebooks.
 
