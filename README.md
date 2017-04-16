@@ -7,10 +7,10 @@ The Docker image we will be deploying can be found here. It contains a simple Fl
 Azure Container Services enables you to configure, construct and manage a cluster of virtual machines pre-configured to run containerized applications. Once the cluster is set up you can use a number of open-source scheduling and orchestration tools, such as Kubernetes and DC/OS. This is ideal for machine learning application since we can use Docker containers which enable us to have ultimate flexibility in the libraries we use and allows us to easily scale up based on demand. While always ensuring that our application remains performant. You can create an ACS through the Azure portal but in this tutorial we will be constructing it using the Azure CLI.
 
 The application will be a simple image classification service, where we will submit an image and get back what class the image belongs to. We have split the process into four sections.
-[Create Docker image of our application](BuildImage.ipynb)
-[Test the application locally](TestLocally.ipynb)
-[Create an ACS cluster and deploy our web app](DeployACS.ipynb)
-[Test our web app](TestApp.ipynb)
+* [Create Docker image of our application](BuildImage.ipynb)
+* [Test the application locally](TestLocally.ipynb)
+* [Create an ACS cluster and deploy our web app](DeployACS.ipynb)
+* [Test our web app](TestApp.ipynb)
 
 Each section is accompanied by a Jupyter notebook which contain step by step instructions on how to create, deploy and test a web application.
 
