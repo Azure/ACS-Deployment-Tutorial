@@ -9,8 +9,8 @@ Azure Container Services enables you to configure, construct and manage a cluste
 The application will be a simple image classification service, where we will submit an image and get back what class the image belongs to. We have split the process into four sections.
 * [Create Docker image of our application](BuildImage.ipynb)
 * [Test the application locally](TestLocally.ipynb)
-* [Create an ACS cluster and deploy our web app](DeployACS.ipynb)
-* [Test our web app](TestApp.ipynb)
+* [Create an ACS cluster and deploy our web app](DeployOnACS.ipynb)
+* [Test our web app](TestWebApp.ipynb)
 
 Each section is accompanied by a Jupyter notebook which contain step by step instructions on how to create, deploy and test a web application.
 
