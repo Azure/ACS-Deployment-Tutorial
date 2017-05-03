@@ -1,4 +1,4 @@
-### Authors: Mathew Salvaris and Ilia karmanov
+### Authors: Mathew Salvaris and Ilia Karmanov
 
 # Deploy ML on ACS 
 Deploying machine learning models can often be tricky due to their numerous dependencies, deep learning models often even more so. One of the ways to overcome this is to use Docker containers. Unfortunately, it is rarely straight forward. In this tutorial, we will demonstrate how to deploy a pre-trained deep learning model using Azure Container Services which allows us to orchestrate a number of containers using DC/OS. By using Azure Container Services, we can ensure that is performant, scalable and flexible enough to accommodate any Deep Learning framework. 
